@@ -1,0 +1,23 @@
+$btn:#ff0000;
+$brr:50%;
+$color:#ffffff;
+$white:#fff;
+
+.del{
+    background: $btn;
+    color: $color;
+    float: left;
+    border-radius: 50%;
+    padding: 4px; font-size: 8px;
+}
+.todo{
+    background: $white;
+    border-bottom: 1px $btn dotted;
+}
+.is-complete{
+    text-decoration: line-through;
+}
+
+.text-success {color: green; font-weight: bold;}
+.text-danger {color: red;font-weight: bold; font-style: italic; }
+.text-special { color: rgb(17, 0, 255); font-style: italic;font-weight: bold;}

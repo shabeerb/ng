@@ -1,0 +1,24 @@
+ 
+ <div class="text-success">welcome to :- {{ intername }}</div>
+ <div [class]="successClass">welcome to :- {{ intername }}</div>
+ <div class="text-special" [class]="successClass">welcome to :- {{ intername }}</div>
+<div [class.text-danger]="haserror">{{ intername }}</div>
+
+
+<ul *ngFor="let about of aboutus">
+  <li><input type="checkbox"> {{about.personname}}
+  <button class="del">XXX</button></li>
+
+</ul>
+<h2 [ngClass]="messageClass"> {{ siteurl }}</h2>
+
+
+<input [id]="myid" type="text" value="Shabeer">
+
+ 
+ <div [style.color]="haserror ? 'red' : 'green' ">Style Buinding Color</div>
+ <div [style.color]="heightColor">Buinding two</div>
+ <div [ngStyle]="titleStyle">Style Three</div>
+ 
+ <p style="background:red">{{ 3 + 3 }}</p>
+ 

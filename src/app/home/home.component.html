@@ -1,0 +1,28 @@
+<div>{{ name }}</div>
+
+<h2 [class.gray]="h2style">
+  Home | Dashboard
+</h2>
+
+<!-- <h2 [style.color]="h1Style ? 'gray' : 'green' ">Dashboard</h2> -->
+
+<h2 [ngStyle]="{
+  'color': h1Style ? 'red' : 'green',
+  'font-size' : !h1Style ? '1em' : '4em'
+}">Dashboard</h2>
+
+ 
+
+<button (click)="firstclick()">Click Here</button>
+&nbsp;
+<button (click)="stylec()">Click two</button>
+
+<ul *ngIf="users">
+  <li *ngFor="let user of users.data">
+    <img [src]="user.avatar">
+    <p>{{ user.id }} {{ user.first_name }} {{ user.last_name }}</p>
+  </li>
+</ul>
+ 
+
+

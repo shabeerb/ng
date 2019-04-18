@@ -1,0 +1,40 @@
+<div>{{ date | date:'shortTime'}}</div>
+
+<div>{{ date | date:'longTime'}}</div>
+
+
+
+<p>
+hello {{name | uppercase}} {{ 2+ 10 }}
+</p>
+
+
+<ul *ngFor="let products of product">
+    <li> {{ products.capcity}} {{ products.productname }}</li>
+</ul>
+
+<h2 [style.color]=" hasError ? 'red': 'green' ">Style Buinding</h2>
+<h2 [style.color]="highLight">Buniding Two</h2>
+<div [ngStyle]="titlestyle">Buinding Tree</div>
+
+<button (click)="messageEvn($one)">Greeting</button>
+<div>{{greeing}}</div>
+
+<div>{{fname}} {{age}}</div> <p>{{ myHero }}</p>
+
+<ul *ngFor="let heroyes of heros">
+    <li>{{heroyes}}</li>
+</ul>
+
+    <ul *ngFor="let samplehero of heroes">
+        <li> {{ samplehero.name }} {{ samplehero.id}} {{samplehero.lname}}</li>
+    </ul>
+ <h2> {{ sname  | slice:0 }}</h2>
+
+ <h3>{{ person | json}}</h3>
+ <h2>{{ 5.983  | number:'3.2-4'}}</h2>
+ <h3>{{ 1.582  | number:'1.1-1'}}</h3>
+
+ <h2>{{ 0.137 | percent }}</h2>
+
+ <h3>{{ 0.25 | currency:'USD':'code'}}</h3>

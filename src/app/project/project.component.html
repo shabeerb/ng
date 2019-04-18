@@ -1,0 +1,27 @@
+<p>
+  project works! ssd
+</p>
+<div>{{ usernameof }} {{age}} {{ publicissue }}</div>
+
+<!-- <h2 *ngIf="displayName; else elseBlock">CodeVolutiodn</h2>
+
+<ng-template #elseBlock>
+    <h2>Name  hidden</h2>
+</ng-template> -->
+
+<div *ngIf="displayName; then thenblock; else elseBlock" ></div>
+<ng-template #thenblock>Show data Block</ng-template>
+<ng-template #elseblock>hidden data Block</ng-template>
+
+<table>
+  <tr><td>KV</td><td>KVA</td><td>VA</td><td>Active Power</td><td>Satus</td></tr>
+    <tr *ngFor="let powermenter of meters">
+       <td>{{ powermenter.va }}</td> <td> {{powermenter.kw}}</td>
+       <td>{{ powermenter.kva }}</td> <td> {{powermenter.active}}</td>
+       <td>{{ powermenter.brstaus }}</td>
+    </tr>
+    </table>
+  <div *ngFor="let emp of employee">
+    <p>{{ emp.id}} {{ emp.name }} {{ emp.age }}</p>
+  </div>
+ 
