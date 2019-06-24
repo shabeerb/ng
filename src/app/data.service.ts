@@ -18,8 +18,8 @@ export class DataService {
   // }
 
   getUsers(){
-    return this.http.get('https://reqres.in/api/users');
-    //return this.http.get('http://127.0.0.1/test/mock_data.json');
+    //return this.http.get('https://reqres.in/api/users');
+    return this.http.get('../assets/data.json');
   }
 
 }

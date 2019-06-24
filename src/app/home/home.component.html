@@ -6,23 +6,24 @@
 
 <!-- <h2 [style.color]="h1Style ? 'gray' : 'green' ">Dashboard</h2> -->
 
-<h2 [ngStyle]="{
-  'color': h1Style ? 'red' : 'green',
-  'font-size' : !h1Style ? '1em' : '4em'
-}">Dashboard</h2>
-
- 
+<h2 [ngStyle]="{'color': h1Style ? 'red' : 'green', 'font-size' : !h1Style ? '1em' : '4em'}">Dashboard</h2>   
 
 <button (click)="firstclick()">Click Here</button>
 &nbsp;
 <button (click)="stylec()">Click two</button>
 
-<ul *ngIf="users">
+<!-- <ul *ngIf="users">
   <li *ngFor="let user of users.data">
-    <img [src]="user.avatar">
-    <p>{{ user.id }} {{ user.first_name }} {{ user.last_name }}</p>
+     <img [src]="user.avatar"> 
+    <p>{{ user.id }} {{ user.first_name }} {{ user.last_name}} {{user.email}} {{user.gender}} </p>
   </li>
-</ul>
+</ul> -->
+
  
 
+<table *ngIf="users">
+  <tr *ngFor="let user of users.data">
+      <td>{{ user.id }}</td> <td>{{ user.first_name }}</td><td>{{ user.last_name}} </td><td>{{user.email}}</td><td>{{user.gender}} </td><td>{{user.ip_address}}</td>
+  </tr>
+</table>
 

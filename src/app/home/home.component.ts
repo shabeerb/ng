@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
 
    h2style: boolean = false;
    h1Style: boolean = false;
+   vlanumber: number;
   
 
   
@@ -22,8 +23,9 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.data.getUsers().subscribe(data => {
       this.users = data
-      console.log(this.users)
-    })
+      //console.log(this.users)
+    });
+
   }
 
   firstclick(){
@@ -31,6 +33,9 @@ export class HomeComponent implements OnInit {
     this.h2style= true;
     //this.data.firstC();
   }
+
+ 
+
   stylec(){
     this.h1Style = true;
   }

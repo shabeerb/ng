@@ -8,6 +8,7 @@ import { ProjectComponent } from './project/project.component';
 import { HelloComponent } from './hello/hello.component';
 import { NeoComponent } from './neo/neo.component';
 import { SidenavComponent} from './sidenav/sidenav.component';
+import { ServiceComponent } from './service/service.component';
 
 
 
@@ -20,6 +21,7 @@ const routes: Routes = [
    {path:'hello',component:HelloComponent},
    {path:'neo',component:NeoComponent},
    {path:'sidenav',component:SidenavComponent},
+   {path:'service',component:ServiceComponent},
    
 ];
 

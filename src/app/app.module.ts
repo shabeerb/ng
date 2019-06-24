@@ -16,6 +16,13 @@ import { HelloComponent } from './hello/hello.component';
 import { NeoComponent } from './neo/neo.component';
 import { LoginComponent } from './login/login.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { ServiceComponent } from './service/service.component';
+
+import { CoursesComponent } from './courses.component';
+import { CourseComponent } from './course/course.component';
+import { CoursesService } from './courses.service';
+
+
 
  
  
@@ -33,7 +40,10 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     HelloComponent,
     NeoComponent,
     LoginComponent,
-    SidenavComponent
+    SidenavComponent,
+    ServiceComponent,
+    CoursesComponent,
+    CourseComponent //course component
   ],
   imports: [
     BrowserModule,
@@ -41,7 +51,9 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    CoursesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
